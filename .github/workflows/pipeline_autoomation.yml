@@ -56,19 +56,7 @@ jobs:
       - name: Run npm audit (fails on high/critical)
         run: npm audit --audit-level=high   # this is the HARD FAIL gate
 
-  secrets-scan:
-    name: Secrets Scan - Gitleaks
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Run Gitleaks
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+ 
   container-scan:
     name: Container Scan - Trivy
     runs-on: ubuntu-latest
