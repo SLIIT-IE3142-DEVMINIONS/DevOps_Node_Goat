@@ -37,6 +37,13 @@ jobs:
           config: p/owasp-top-ten
         continue-on-error: true   # WARN only — see note below
 
+
+      - name: Run NodeGoat custom NoSQL rule
+        uses: semgrep/semgrep-action@v1
+        with:
+          config: .semgrep/nodegoat-nosql.yml
+        continue-on-error: true
+
   dependency-scan:
     name: Dependency Scan - npm audit
     runs-on: ubuntu-latest

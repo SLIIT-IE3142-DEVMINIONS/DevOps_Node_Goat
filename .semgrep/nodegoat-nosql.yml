@@ -1,0 +1,9 @@
+rules:
+  - id: nodegoat-mongodb-unsafe-where
+    message: >
+      MongoDB $where executes JavaScript and should not be used with
+      application-controlled input. Use structured MongoDB query operators.
+    severity: ERROR
+    languages:
+      - javascript
+    pattern-regex: '\$where\s*:'
