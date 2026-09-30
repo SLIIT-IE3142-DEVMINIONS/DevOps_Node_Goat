@@ -1,0 +1,18 @@
+rules:
+  - id: nodegoat-a7-missing-function-access-control-get
+    languages:
+      - javascript
+    message: "Missing function-level access control on /benefits GET route"
+    severity: WARNING
+    patterns:
+      - pattern: app.get("/benefits", isLoggedIn, benefitsHandler.displayBenefits)
+      - pattern-not: app.get("/benefits", isLoggedIn, isAdmin, benefitsHandler.displayBenefits)
+
+  - id: nodegoat-a7-missing-function-access-control-post
+    languages:
+      - javascript
+    message: "Missing function-level access control on /benefits POST route"
+    severity: WARNING
+    patterns:
+      - pattern: app.post("/benefits", isLoggedIn, benefitsHandler.updateBenefits)
+      - pattern-not: app.post("/benefits", isLoggedIn, isAdmin, benefitsHandler.updateBenefits)

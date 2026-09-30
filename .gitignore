@@ -16,6 +16,11 @@ Icon?
 # Idea stuff
 .idea/**
 
+#TLS_CERTS
+artifacts/cert/*.key
+artifacts/cert/*.crt
+artifacts/cert/*.pem
+
 # Zap output
 report*.html
 
