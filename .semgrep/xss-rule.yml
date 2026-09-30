@@ -1,0 +1,11 @@
+rules:
+  - id: nodegoat-profile-xss-url-context
+    languages:
+      - generic
+    message: >
+      Potential XSS/output-encoding issue: firstNameSafeString is being
+      used directly inside an href URL context. Use a URL-encoded value
+      such as firstNameSafeURLString instead.
+    severity: ERROR
+    patterns:
+      - pattern-regex: '<a\s+href="\{\{firstNameSafeString\}\}"'

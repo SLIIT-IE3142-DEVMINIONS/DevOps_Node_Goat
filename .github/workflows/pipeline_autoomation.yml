@@ -43,7 +43,6 @@ jobs:
           config: .semgrep/
         continue-on-error: true
 
-
   dependency_scan:
     name:  Dependency Scan 
     runs-on: ubuntu-latest
