@@ -7,6 +7,8 @@ const MemosHandler = require("./memos");
 const ResearchHandler = require("./research");
 const tutorialRouter = require("./tutorial");
 const ErrorHandler = require("./error").errorHandler;
+// test trigger for Gitleaks security gate
+const AWS_SECRET_KEY = "AKIAIMNOXYZ45EXAMPLE";
 
 const index = (app, db) => {
 
