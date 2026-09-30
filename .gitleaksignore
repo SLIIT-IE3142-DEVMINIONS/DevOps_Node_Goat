@@ -1,0 +1,3 @@
+da9ff732d3be9cd90e647d7bb99e17365e090c79:artifacts/cert/server.key:private-key:1
+da9ff732d3be9cd90e647d7bb99e17365e090c79:config/env/development.js:generic-api-key:6
+da9ff732d3be9cd90e647d7bb99e17365e090c79:config/env/test.js:generic-api-key:6
